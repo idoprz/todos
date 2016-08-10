@@ -13,6 +13,9 @@ var db = 'mongodb://mo-165f80f3c.mo.sap.corp:27017/koko2';
 app.use(morgan('dev')); // log every request to the console
 
 // add parser
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json()); // parse application/json
 
 // connect to mongodb
